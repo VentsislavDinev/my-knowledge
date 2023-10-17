@@ -1,14 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
+import Dropdown from 'react-bootstrap/Dropdown';
+import SplitButton from 'react-bootstrap/SplitButton';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Footer from './Component/Footer';
+import Navbar from './Component/Navbar';
+import {
+  BrowserRouter, Routes, Route, Link
+} from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <Container   gap={3}>
+    
+      <React.StrictMode>
+        <Navbar />
+        <App />
+        <Footer />
+      </React.StrictMode>
+  </Container>
 );
 
 // If you want to start measuring performance in your app, pass a function
