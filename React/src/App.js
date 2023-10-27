@@ -5,9 +5,10 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import {
     BrowserRouter, Routes, Route, Link
   } from "react-router-dom";
-
-  import { Form, Button, FormGroup, FormControl, CardGroup,  ControlLabel,Tab, Card, Tabs, Row, Col, Table, InputGroup } from "react-bootstrap";
-  import { useParams, useHistory, useNavigate } from 'react-router-dom';
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import { Form, Button, FormGroup, FormControl, CardGroup,  ControlLabel,Tab, Card, Tabs, Row, Col, Table, InputGroup } from "react-bootstrap";
+import { useParams, useHistory, useNavigate } from 'react-router-dom';
   
   function App() {
     return (
