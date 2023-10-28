@@ -9,7 +9,14 @@ import {User} from "../../interface/user";
   styleUrls: ['./view.component.css']
 })
 export class ViewComponent implements  OnInit{
-  getUser: {} = {};
+  getUser: User= {
+    id: 0,
+    name: '',
+    username: '',
+    email: '',
+    phone: '',
+    website: ''
+  };
   constructor(private settingsCompanyService: SettingsTerminalService, private  route: ActivatedRoute) {
   }
     ngOnInit(): void {
@@ -23,9 +30,7 @@ export class ViewComponent implements  OnInit{
                 }
               });
             }
-            console.log("Hello");
           }
         })
     }
-
 }

@@ -5,6 +5,12 @@
     <label mdbLabel class="form-label" for="form4Example1">Name</label>
   </mdb-form-control>
 
+  <mdb-form-control class="mb-4">
+    <progress *ngIf="fileStatus.status == 'progress'" id="file" [value]="fileStatus.percent" max="100"> 32% </progress>
+    <input mdbInput type="file" id="form4Example1" class="form-control"  (change)="fileUpload($any($event).target.files)" multiple />
+    <label mdbLabel class="form-label" for="form4Example1">Name</label>
+  </mdb-form-control>
+
   <!-- Email input -->
   <mdb-form-control class="mb-4">
     <input mdbInput type="email"

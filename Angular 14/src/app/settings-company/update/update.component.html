@@ -39,5 +39,6 @@
   </div>
 
   <!-- Submit button -->
-  <button mdbRipple type="button" class="btn btn-primary btn-block mb-4">Send</button>
+  <button mdbRipple type="submit" class="btn btn-primary btn-block mb-4">Send</button>
+  <button mdbRipple type="button" class="btn btn-primary btn-block mb-4" (click)="deleteEmployee(this.getUser.id)">Delete</button>
 </form>
