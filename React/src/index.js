@@ -1,17 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
-import Dropdown from 'react-bootstrap/Dropdown';
-import SplitButton from 'react-bootstrap/SplitButton';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Footer from './Component/Footer';
@@ -20,15 +12,15 @@ import {
   BrowserRouter, Routes, Route, Link
 } from "react-router-dom";
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Container   gap={3}>
-    
-      <React.StrictMode>
-        <Navbar />
+    <BrowserRouter>
+      <Navbar />
         <App />
-        <Footer />
-      </React.StrictMode>
+      <Footer />
+    </BrowserRouter>
   </Container>
 );
 
