@@ -8,13 +8,13 @@ function Show() {
   const [user, setUser] = useState();
   const {id} = useParams();
 
-  const loadUsers = () => {  
+  useEffect(() => {
     axios.get(`https://jsonplaceholder.typicode.com/users/${id}`)
-      .then((res)=> {
-          setUser(res.data)
-          console.log(res)
-      });
-  };
+    .then((res)=> {
+        setUser(res.data)
+    });
+  });
+
   return (
     <MDBTable>
     <MDBTableHead>
@@ -25,11 +25,9 @@ function Show() {
         <th scope='col'>Handle</th>
       </tr>
     </MDBTableHead>
-        {user && (
-          // Customer Additional contact
           <MDBTableBody>
           <tr>
-            <th scope='row'>1</th>
+            <th scope='row'>{user.id}</th>
             <td>{user.name}</td>
             <td>{user.email}</td>
             <td>{user.company.name}</td>
@@ -37,8 +35,6 @@ function Show() {
             <td>{user.address.street} {user.address.suite} {user.address.city}</td>
           </tr>
         </MDBTableBody>
-    
-        )}
     </MDBTable> 
    )
 }
